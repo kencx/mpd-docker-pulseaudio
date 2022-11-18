@@ -1,5 +1,4 @@
 version: '3.6'
-
 services:
   mpd:
     build:
@@ -17,7 +16,7 @@ services:
       - PULSE_COOKIE=/tmp/pulse.cookie
     volumes:
       - ./mpd.conf:/etc/mpd.conf
-      - ./music:/var/lib/mpd/music
+      - ./music:/var/lib/mpd/music:ro
       - ./playlists:/var/lib/mpd/playlists
       - ./data:/var/lib/mpd/data
       - /run/user/1000/pulse:/run/user/1000/pulse
