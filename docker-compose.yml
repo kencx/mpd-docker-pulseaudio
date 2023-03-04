@@ -7,7 +7,7 @@ services:
     user: "1000"
     cap_add:
       - SYS_NICE
-    restart: unless-stopped
+    restart: none
     ports:
       - 8800:8800
       - 6600:6600

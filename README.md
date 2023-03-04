@@ -18,6 +18,10 @@ Finally, we ensure that PulseAudio is not started within the container with a cu
 `pulse-client.conf`. It prevents the use of shared memory by disabling `shm` which is
 known to cause errors.
 
+## Issues
+- If container is allowed to start automatically on reboot of the host, the pulseaudio socket is
+  deleted as it is not started before Docker.
+
 ## References
 - [x11docker - Container sound](https://github.com/mviereck/x11docker/wiki/Container-sound:-ALSA-or-Pulseaudio)
 - [docker-pulseaudio-example](https://github.com/TheBiggerGuy/docker-pulseaudio-example)
